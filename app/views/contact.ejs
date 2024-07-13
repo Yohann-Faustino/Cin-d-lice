@@ -1,0 +1,30 @@
+<%- include ('partials/header') -%>
+
+
+    <%- include ('partials/title') -%>
+
+            <%- include ('partials/nav') -%>
+
+            <div class="contacFormeContainer">
+      
+              <form class="contactLabel" id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+      
+                  <label for="name">Votre nom:</label><br />
+                  <input id="name" class="input" name="name" type="text" value="" size="30" aria-describedby="name_validation"/>
+                  <span id="name_validation" class="error_message"></span>
+
+                  <label for="email">Votre email:</label><br />
+                  <input id="email" class="input" name="email" type="text" value="" size="30" aria-describedby="email_validation"/>
+                  <span id="email_validation" class="error_message"></span>
+
+                  <label for="message">Votre message ou votre suggestion:</label><br />
+                  <textarea id="message" class="input" name="message" rows="7" cols="30" aria-describedby="message_validation"></textarea>
+                  <span id="message_validation" class="error_message"></span>
+      
+                <input class="boutonSoumettreContact" id="submit_button" type="submit" value="Envoyer" />
+              </form>
+            </div>
+
+            <div class="decoContact"></div>
+
+        <%- include('partials/footer') -%>

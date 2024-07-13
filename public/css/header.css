@@ -1,0 +1,34 @@
+.titreBlock {
+
+  color: var(--h1-color); /* Variable qui definie la couleur du titre */
+  display: flex; /* Rend le conteneur titreBlock flexible */
+  flex-direction: row; /* Aligne le logo et le tire de la page */
+  text-align: center; /* Centre horizontalement le titre */
+  align-items: center;  /*Centre verticalement le titre et le logo */
+  justify-content: space-around; /* Met de l'espace autour et entre chaque element du header */
+  background-color: var(--background-header-color) ; /* Couleur de fond du header */
+  font-family: var(--h1-police) ; /* Police du titre */
+  height: 100px; /* On met une hauetur au block */
+
+}
+
+
+h1 {
+
+  width: 70%; /* Fixe la taille du titre pour laisser de l'espace au logo pour le bouger au besoin */ 
+  font-size:x-large;
+  
+}
+
+
+/*! Styles Spécifiques à la version desktop */ 
+@media only screen and (min-width: 700px) {
+
+
+  .titreBlock {
+
+    justify-content: space-around; /* Met de l'espace autour et entre chaque element du header */
+    font-size: xx-large ; /* Taille de la police du titre */
+
+  }
+}

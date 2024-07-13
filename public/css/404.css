@@ -1,0 +1,29 @@
+.erreurBlock {
+
+    display: flex; /* Rend l'element flexible */
+    flex-direction: column; /* Met le contenue du container en colonne */
+    text-align: center; /* Aligne le texte */
+    width: 50%; /* Definis la taille de l'img d'erreur */
+    position: absolute; /* Met en position absolute et si on designe pas de relative ce sera le body automatiquement */
+    top: 25%; /* Accroche l'img constament a cette endroit en hauteur pour rester centrer */
+    left: 25%; /* Accroche l'img constament a cette endroit en largeur pour rester centrer */
+    font-size: xx-large; /* Aggrandie la taille de la police */
+    font-family: var(--error-police); /* Definis le type de police */
+
+}
+
+
+.lienRetour {
+
+    color: var(--error-color); /* Definis la couleur du texte*/
+
+}
+
+
+.lienRetour:hover { /* Ce css s'applique au survole de celui ci par la souris */
+
+    color: var(--error-hover-color); /* Definis la couleur du texte*/
+    background-color: var(--error-hover-background) ; /* Definis la couleur du background*/
+    border-radius: 15px; /* Arrondie la bordure */
+    
+}

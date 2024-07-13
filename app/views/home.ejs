@@ -1,0 +1,28 @@
+<%- include ('partials/header') -%>
+
+
+    <%- include ('partials/title') -%>
+
+            <%- include ('partials/nav') -%>
+            <% if(user) { %>
+                <p>Bonjour <%= user.prenom %> <%= user.nom %> !</p>
+            <% } %>
+            <!-- <div id="status">Statut de connexion: <span id="status-text">Vérification...</span></div> -->
+
+                <p class="introParagraphe">
+                    Ciné Délice, une aventure culinaire à travers les mondes magiques du cinéma et des séries.<br>
+                    Ciné Délice est notre vision alliant l'art du cinéma avec la magie de la cuisine.<br>
+                    Notre objectif est d'offrir aux utilisateurs la possibilité de recréer les plats emblématiques qu'ils
+                    ont vus sur grand écran ou à la télévision, directement dans leur propre cuisine.</p>
+
+                    <div class="imageAccueilBlock">
+                        <section class="recettesBlock">
+                            <a href="/recettes" class="voirPlusRecette" aria-label="Liens vers la liste des recettes">Voir recettes</a>
+                        </section>
+        
+                        <section class="filmsBlock">
+                            <a href="/films" class="voirPlusFilm" aria-label="Liens vers la liste des films">Voir films</a>
+                        </section>
+                    </div>
+
+        <%- include('partials/footer') -%>

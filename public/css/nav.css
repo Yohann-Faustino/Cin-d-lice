@@ -1,0 +1,69 @@
+.navBlock {
+
+  height: 250px; /* Definis la hauteur de l'element */
+  width: 100%; /* Demande a l'element de prendre la largeur de son parent */
+  background-size: contain; /* L'img prens la taille de son parent */
+  background-repeat: no-repeat; /* Interdit la repetition de l'img de background */
+  background-position: center; /* Centre le background par rapport a son container */
+  background-image: url("/img/clap.svg"); /* Img que l'on met en background */
+  position: relative; /* Sert de référence de positionnement pour les enfants ayant position: absolute */
+
+}
+
+
+.navUl {  
+
+  padding-left: 0; /* Retire le padding natif de l'element */
+  width:90%; /* Demande a l'element de prendre 50% de la largeur de son parent */
+  display: flex; /* Rend le conteneur titreBlock flexible */
+  justify-content: space-between; /* Met de l'espace entre les elements de la nav */
+  align-items: center; /* Centre verticalement les elements du li */
+  font-size: 0.9rem; /* Taille de la police des li */
+  list-style: none; /* Retire les puces (points) de la navListe */
+  position: absolute; /* L'element est positionné par rapport à son parent avec position: relative */  top: 50%; /* Notre element etant en position deplacable on lui donne un point de depart */
+  left: 50%; /* On lui donne un secong point de depart pour qu'il reste toujours au meme endroit meme si la taille de la page est differente */
+  transform: translate(-48%, 20%); /* Une fois la position de base definie precedement on lui donne la position finale qu'on l'on souhaite garder */
+
+}
+
+
+.navListe {
+
+  color: var(--navListe-color); /* Couleur de la navListe */
+  font-family: var(--navListe-police); /* Police de la navListe */
+  text-decoration: none; /* Retire le soulignement des li de la navListe */
+
+}
+
+
+/*! Styles Spécifiques à la version tablette */ 
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+  .navUl {
+
+    font-size: 1.3rem; /* Definis la taille de la police des li */
+    width: 70%; /* Demande a l'element de prendre la largeur de son parent */
+    
+  }
+
+}
+
+
+/*! Styles Spécifiques à la version desktop */ 
+@media only screen and (min-width: 1025px) {
+
+  .navBlock {
+
+    height: 380px; /* Definis la hauteur de l'element */
+
+  }
+
+  .navUl {
+
+    font-size: 1.8rem; /* Definis la taille de la police des li */
+    width: 80%; /* Demande a l'element de prendre la largeur de son parent */
+
+  }
+
+}

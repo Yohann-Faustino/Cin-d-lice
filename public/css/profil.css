@@ -1,0 +1,166 @@
+.containerProfil {
+
+  display: flex; /* Rend le container flexible */
+  flex-direction: column; /* Met le contenue du container en colonne */
+  
+}
+  
+  
+.blockGauche {
+
+  display: flex; /* Rend le container flexible */
+  flex-direction: column; /* Met le formulaire et son titre */
+  align-items: center; /* Centre le titre */
+
+}
+
+
+.blockCentre {
+
+  height: 100px; /* Hauteur choisis du blockCentre */
+  width: 400px; /* Largeur choisis du blockCentre */
+  background-image: url("/img/ProfilHori.png"); /* Met une img en background */
+  background-size: cover; /* Obliger le background a prendre la taille du parent */
+  background-position: center ; /* Centre l'img par rapport a son parent */
+
+}
+
+
+.blockDroit {
+
+  display: flex; /* Rend le container flexible */
+  flex-direction: column; /* Met le formulaire et son titre */
+  text-align: center; /* Aligne le titre */
+  padding-top: 1rem; /* Met un espace en haut entre le contenue et son parent */
+
+}
+  
+
+.imgTransparente {
+
+  display: flex; /* Rend le container flexible */
+  flex-direction: column; /* Met en colonne le titre et le reste de la div */
+  align-items: center; /* Centre le titre */
+  background-image: url("/img/recette_favorite.png"); /* Met une img en background */
+  background-position: center; /* Centre l'img du background */
+  background-size: cover; /* On demande a l'image de background de prendre la taille de son parent */
+  height: 300px; /* On choisis une taille artificiellement car au debut la liste de recettes likées est vide */
+  opacity: 0.3; /* Met de l'opaciter sur l'img de background */
+
+}
+
+
+.divFormLabels {
+
+  display: flex; /* Rend le container flexible */
+  flex-direction: column; /* Met en colone les inputs du form et ses labels */
+  align-items: center; /* Aligne les labels du form */
+  color: var(--profile-input-color); /* Variable qui modifie la couleur des labels du form */
+  font-family: var(--profile-title-police); /* Variable qui modifie la police des labels du form */
+
+}
+
+  
+.boutonSavProfil {
+
+  background-color: var(--buttonSavProfile-background-color); /* Variable qui modifie la couleur du background du bouton enregistrer*/
+  font-family: var(--buttonSavProfile-police); /* Variable qui modifie la police du bouton enregistrer */
+  color: var(--buttonSavProfile-color) ; /* Variable qui modifie la couleur la couleur du bouton enregistrer */
+  text-decoration: none; /* Retire le soulignement du lien du bouton */
+  font-size: 1rem; /* Taille du texte du bouton */
+  border-radius: 0.7rem; /* Arondie les angles du bouton */
+  border-style: none; /* Retire l'epaisseur de la bordure */
+  font-weight: 500; /* Epaisseur de la police du texte du bouton contact */
+  height: 1.5rem; /* Taille du bouton */
+  margin-top: 0.5rem; /* Met un espace entre le bouton et son formulaire */
+  padding-bottom: 1.8rem; /* Met un espace entre le bord du bouton et son contenue */
+  width: 100%; /* Definis la largeur du bouton par rapport a son parent */
+
+}
+  
+  
+.profileLikees {
+
+  font-family: var(--like-title-police); /* Variable qui modifie la police du titre des recettes likées */
+  color: var(--like-title-color); /* Variable qui modifie la couleur du titre des recettes likées */
+  
+}
+
+  
+.profileTitre {
+
+  font-family : var(--profile-title-police); /* Variable qui modifie la police du titre mon profil */
+  color: var(--profile-title-color); /* Variable qui modifie la couleur du titre mon profil */
+  
+}
+
+
+.boutonSupProfil {
+
+  background-color: var(--button-sup-background-color); /* Definis la couleur du background*/
+  color: var(--button-sup-color); /* Definis la couleur du texte*/
+  margin-top: 20px; /* Met un espace au dessus de l'element */
+  border-radius: 0.7rem; /* Arondie les angles du bouton */
+  border: none; /* Retire la bordure native du bouton */
+  margin-bottom: 2rem; /* Met un espace en dessous du bouton entre lui et son parent */
+  
+}
+
+
+.boutonSupProfil:hover { /* Ce css s'applique au survole de celui ci par la souris */
+
+  background-color: var(--sup-hover-background); /* Definis la couleur du background*/
+  color: var(--sup-hover-color); /* Definis la couleur du texte*/
+  border-radius: 0.7rem; /* Arondie les angles du bouton */
+
+}
+
+
+.blockGauche {
+
+  background-image: url("/img/billetVerti.png"); /* Met une img en background */
+  background-position: center; /* Centre l'img de background */
+  background-size: cover; /* L'img de background prens la totaliter de la taille de osn parent */
+  background-repeat: no-repeat; /* Evite la repetition de l'img de background */
+  padding-top: 1rem; /* Met un espace en haut entre le contenue et son parent */
+  padding-bottom: 0.5rem; /* Met un espace au dessus du block entre le titre et son parent */
+
+}
+
+
+/*! Styles Spécifiques à la version desktop */ 
+@media only screen and (min-width: 700px) {
+
+
+  .containerProfil {
+
+    display: flex; /* Rend le container flexible */
+    flex-direction: row; /* Met le contenue du container en ligne */
+    justify-content: center; /* Met le container au centre de la page */
+
+  }
+
+  .blockGauche {
+
+    width: 50%; /* Largeur de l'img prens 40% de celle de son parent */
+  
+  }
+
+  .blockDroit {
+
+    width: 30%; /* Largeur de l'img prens 50% de celle de son parent */
+    background-repeat: no-repeat; /* Evite la repetition de l'img du background du block de droite */
+
+  }
+
+  .blockCentre {
+
+    background-image: url("/img/ProfilVerti.png"); /* Met une img en background */
+    background-repeat: no-repeat; /* Evite que el background se repete */
+    background-size: cover; /* Obliger le background a prendre la taille du parent */
+    height: 500px;  /* Hauteur choisis du blockCentre */
+    width: 140px;  /* Largeur choisis du blockCentre */
+
+  }
+
+}

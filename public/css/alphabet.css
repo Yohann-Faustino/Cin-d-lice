@@ -1,0 +1,45 @@
+
+#alphabet {
+
+    display: flex; /* Rend l'element flexible */
+    flex-wrap: wrap; /* Met en forme de lots de plusieurs card sur plusieurs lignes */
+    justify-content: center; /* Aligne horizontalement les elements */
+    padding: 10px; /* Met un espace entre les lettres et son parent */
+    border-color: var(--background-border-color); /* Choisis la couleur de la bordure */
+    border-width: 5px; /* Specifie l'epaisseur du triat de la bordure */
+    border-style: solid; /* Style de la bordur est un trait continue */
+    background-color: var(--background-color-block); /* Couleur de fond pour la div */
+    border-radius: 8px; /* Bordures arrondies */
+
+}
+
+
+.letter {
+
+    display: inline-block; /* S'alignent les uns à côté des autres sur une même ligne, si l'espace le permet */
+    margin: 5px;  /* Met un autour du block de la lettre */
+    padding: 10px 15px; /* Met un espace entre la lettre et son block */
+    background-color: var(--background-color-letter); /* Couleur de fond pour la l'element */
+    border: 1px solid var(--border-color-letter); /* Definis l'epaisseur le type et la couleur de la bordure du parent de la lettre */
+    color: var(--color-letter); /* Definis la couleur de la lettre */
+    border-radius: 5px; /* Bordures arrondies */
+
+}
+
+
+.letter:hover { /* Hover specifie quie le css s'effectuera au survole de l'element par la souris */
+
+    background-color: var(--hover-background-color); /* Couleur de fond pour la l'element */
+    border: 1px solid var(--hover-border-color-letter); /* Definis l'epaisseur le type et la couleur de la bordure du parent de la lettre */
+    color: var(--hover-color-letter); /* Definis la couleur de la lettre */
+    transform: scale(1.1); /* Agrandissement au survol */
+
+}
+
+
+.letterSelected { /* Cette classe s'applique lorsque l'on a cliquer sur un bouton pour filtrer cards par titre */
+
+    background-color: var(--letter-selected-police-color); /* Couleur de fond pour la l'element */
+    color: var(--letter-selected-background-color); /* Definis la couleur de la lettre */
+    
+}

@@ -1,0 +1,60 @@
+.contacFormeContainer {
+
+  display: flex; /* Rend le block flexible */
+  justify-content: center; /* Centre horizontalement le form */
+  text-align: center; /* Centre le text du form */
+  background-color: var(--clap-color); /* Couleur de background a choisir */
+  width: 90%; /* On definis la taille de l'element par rapport a son parent */
+  margin: auto; /* Met une marge equivalente autour du container */
+  border-radius: 5px 5px 5px 5px; /* Arrondie certains angles du container */ 
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 1); /* Ombrage blanc vers l'interieur de l'img */
+
+}
+
+
+.contactLabel {
+
+  display: flex; /* Rend le block flexible */
+  flex-direction: column; /* Met le contenue du container en colonne */
+  align-items: center; /* Centre les elements verticalement */
+  color: var(--input-form-contact-color); /* Couleur des input du formulaire de contact */
+  font-family: var(--input-form-contact-police); /* Police des input du formulaire de contact */
+  padding-top: 2rem; /* Met un espace entre le haut du form et son parent */
+
+}
+
+
+.boutonSoumettreContact {
+
+  background-color: var(--button-contact-background-color); /* Variable qui modifie la couleur du background du bouton enregistrer*/
+  font-family: var(--button-contact-police); /* Variable qui modifie la police du bouton enregistrer */
+  color: var(--button-contact-color) ; /* Variable qui modifie la couleur la couleur du bouton enregistrer */
+  margin-bottom: 2rem; /* Cre un espace en bas entre le forme et la bordure de son parent */
+  margin-top: 2rem; /* Cre un espace en haut entre le forme et la bordure de son parent */
+  border-radius: 0.7rem; /* Arrondie les angles du bouton */
+  border: none; /* Retire la bordure specifique du bouton de soumission */
+
+}
+
+
+.decoContact {
+
+  background-image: url("/img/salle_cinema.png"); /* Definis une img en background */
+  background-size: cover; /* Demande a l'img de prendre la taille de son parent */
+  background-position: calc(50% - 0%) calc(50% - -40%); /* Definis la position du background */
+  height: 100px; /* Definis la hauteur de l'element */
+
+}
+
+  
+/*! Styles Spécifiques à la version desktop */ 
+@media only screen and (min-width: 700px) {  
+
+  .decoContact {
+
+    height: 180px; /* Definis la hauteur de l'element */
+    margin-top: 5rem; /* Met un espace entre le haut de l'ement et de l'element superrieur */
+
+  }
+
+}

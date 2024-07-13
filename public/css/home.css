@@ -1,0 +1,142 @@
+.introParagraphe{
+
+  color: var(--introParagraph-color); /* Couleur du introParagraphe */
+  font-family: var(--introParagraph-police); /* Police du introParagraphe */
+  display: flex; /*Rend le block flexible */
+  text-align: center; /* Centre le texte du paragraphe */
+
+}
+
+
+.recettesBlock {
+
+  height: 245px; /* Hauteur choisis du blockCentre */
+  width: 370px; /* Largeur choisis du blockCentre */
+  position: relative; /* Sert de référence de positionnement pour les enfants ayant position: absolute */
+  background-image: url("/img/recette.jpg"); /* On choisis l'img de fond du block */
+  background-size: cover; /* Obliger le background a prendre la taille du parent */
+  background-position: center ; /* Centre l'img par rapport a son parent */
+  margin: auto;  /*Met une marge equivalente autour du parent qui contient le background img */
+  margin-bottom: 0.5rem; /* Ajoute un petit espace en dessous du block recette */
+
+}
+
+
+.voirPlusRecette {
+
+  border-radius: 0.7rem; /* Arrondis les angles du bouton */
+  border: 5px solid rgb(255, 255, 255); /* On choisis l'epaisseur, son type et sa couleur du bord du bouton */ 
+  animation: flickering 2s linear infinite both; /* flickering -> nom de l'animation, temps qu'elle dure, linear -> vitesse de l'animation, infinite -> se repete indefiniement, both -> propriétés de l'animation seront appliquées à la fois au début et à la fin de l'animation */
+  background-color: var(--background-button-more-color); /* Couleur du background du bouton */
+  color: var(--button-more-color); /* Couleur de la police du bouton */
+  position: absolute; /* L'element est positionné par rapport à son parent avec position: relative */  top: 50%; /* Notre element etant en position deplacable on lui donne un point de depart */
+  left: 50%; /* On lui donne un secong point de depart pour qu'il reste toujours au meme endroit meme si la taille de la page est differente */
+  transform: translate(-50%, -50%); /* Une fois la position de base definie precedement on lui donne la position finale qu'on l'on souhaite garder */
+  font-family: var(--button-more-police); /* Police de l'ecriture du bouton */
+  text-decoration: none; /* Retire le soulignement du lien du bouton */
+  padding-left: 0.5rem; /* Met un espace entre le bord gauche du bouton et son contenue */
+  padding-right: 0.5rem; /* Met un espace entre le bord droit du bouton et son contenue */
+
+}
+
+
+.filmsBlock {
+
+  height: 245px; /* Hauteur choisis du blockCentre */
+  width: 370px; /* Largeur choisis du blockCentre */
+  background-image: url("/img/cinema.jpg"); /* On choisis l'img de fond du block */
+  background-size: cover; /* Obliger le background a prendre la taille du parent */
+  background-position: center ; /* Centre l'img par rapport a son parent */
+  margin: auto;  /*Met une marge equivalente autour du parent qui contient le background img */
+  position: relative; /* Sert de référence de positionnement pour les enfants ayant position: absolute */
+
+}
+
+
+.voirPlusFilm {
+
+  border-radius: 0.7rem; /* Arrondis les angles du bouton */
+  border-radius: 0.7rem; /* Arrondis les angles du bouton */
+  border: 5px solid rgb(255, 255, 255); /* On choisis l'epaisseur, son type et sa couleur du bord du bouton */ 
+  animation: flickering 2s linear infinite both; /* flickering -> nom de l'animation, temps qu'elle dure, linear -> vitesse de l'animation, infinite -> se repete indefiniement, both -> propriétés de l'animation seront appliquées à la fois au début et à la fin de l'animation */
+  background-color: var(--background-button-more-color); /* Couleur du background du bouton */
+  color: var(--button-more-color); /* Couleur de la police du bouton */
+  position: absolute; /* L'element est positionné par rapport à son parent avec position: relative */  top: 50%; /* Notre element etant en position deplacable on lui donne un point de depart */
+  left: 50%; /* On lui donne un secong point de depart pour qu'il reste toujours au meme endroit meme si la taille de la page est differente */
+  transform: translate(-50%, 0%); /* Une fois la position de base definie precedement on lui donne la position finale qu'on l'on souhaite garder */
+  font-family: var(--button-more-police); /* Police de l'ecriture du bouton */
+  text-decoration: none; /* Retire le soulignement du lien du bouton */
+  padding-left: 0.5rem; /* Met un espace a gauche entre le bord du bouton et son contenue */
+  padding-right: 0.5rem; /* Met un espace a droite entre le bord du bouton et son contenue */
+
+}
+
+
+/*! Styles Spécifiques à la version desktop */ 
+@media only screen and (min-width: 700px) {
+
+  .introParagraphe{
+    
+    font-size: xx-large; /* Taille de la police du paragraphe */
+    width: 90%; /* L'element prens 90% de son parent */
+    margin: auto; /* Met une marge equivalente autour de l'element */
+    
+  }
+
+  .filmsBlock{
+
+    height: 280px; /* Hauteur choisis du blockCentre */
+    width: 48%;  /*On demande a l'image de prendre 48% de la taille de son parent */
+    background-size: contain; /* Obliger le background a prendre la taille du parent */
+    background-repeat: no-repeat; /* Evite la repetition de l'img de background */
+  
+  }
+    
+  .recettesBlock {
+
+    height: 280px; /* Hauteur choisis du blockCentre */
+    width: 48%;  /*On demande a l'image de prendre 48% de la taille de son parent */
+    background-size: contain; /* Obliger le background a prendre la taille du parent */
+    background-repeat: no-repeat; /* Evite la repetition de l'img de background */
+    margin-bottom: 0; /* Supprime l'espace entre le block recette et ce qu'il y a en-dessous */
+
+  }
+
+  .imageAccueilBlock {
+
+    display: flex; /* Rend le conteneur flexible */
+    flex-direction: row; /*Aligne les images d' imageAccueilBlock */
+    justify-content: space-evenly; /* Met de l'espace autour et entre chaque element d' imageAccueilBlock*/
+
+  }
+
+  .voirPlusRecette {
+
+    position: absolute; /* L'element est positionné par rapport à son parent avec position: relative */    top: 50%; /* Notre element etant en position deplacable on lui donne un point de depart */
+    left: 50%; /* On lui donne un secong point de depart pour qu'il reste toujours au meme endroit meme si la taille de la page est differente */
+    transform: translate(-50%, -50%); /* Une fois la position de base definie precedement on lui donne la position finale qu'on l'on souhaite garder */
+    font-size: 1.5rem; /* Taille du bouton */
+    background-size: cover; /* Obliger le background a prendre la taille du parent */
+
+  }
+
+  .voirPlusFilm {
+
+    position: absolute; /* L'element est positionné par rapport à son parent avec position: relative */    top: 50%; /* Notre element etant en position deplacable on lui donne un point de depart */
+    left: 50%; /* On lui donne un secong point de depart pour qu'il reste toujours au meme endroit meme si la taille de la page est differente */
+    transform: translate(-50%, -50%); /* Une fois la position de base definie precedement on lui donne la position finale qu'on l'on souhaite garder */
+    font-size: 1.5rem; /* Taille du bouton */
+
+  }
+
+
+} 
+
+#status {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+#status-text {
+  font-weight: bold;
+}

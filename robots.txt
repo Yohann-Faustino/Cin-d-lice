@@ -1,0 +1,44 @@
+User-agent: *
+# Applique les instructions suivantes à tous les robots d'indexation des moteurs de recherche.
+
+Disallow: /profile/
+# Empêche l'indexation des pages de profil des utilisateurs.
+
+Disallow: /login/
+# Empêche l'indexation de la page de connexion.
+
+Disallow: /logout/
+# Empêche l'indexation de la page de déconnexion.
+
+Disallow: /signup/
+# Empêche l'indexation de la page d'inscription.
+
+Disallow: /forgotPassword/
+# Empêche l'indexation de la page mot de passe oublié.
+
+Disallow: /profile/
+# Empêche l'indexation de la page profil.
+
+Allow: /films/
+# Autorise l'indexation de la section dédiée aux films.
+
+Allow: /recettes/
+# Autorise l'indexation de la section dédiée aux recettes 
+
+Allow: /mentionsLegales/
+# Autorise l'indexation de la page des mentions légales.
+
+Allow: /404/
+# Autorise l'indexation de la page d'erreur 404 .
+
+Allow: /contact/
+# Autorise l'indexation de la page de contact.
+
+Allow: /
+# Autorise l'indexation de la page d'accueil.
+
+Allow: /planSite/
+# Autorise l'indexation de la page plan du site.
+
+Sitemap: http://www.cinedelice.com/app/views/planSite.ejs
+# Indique l'emplacement du sitemap du site pour aider les moteurs de recherche à trouver toutes les pages à indexer.

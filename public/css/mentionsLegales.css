@@ -1,0 +1,27 @@
+.titreMentions{
+
+    color: var(--h2-color); /* Couleur du titre */
+    font-family: var(--h2-police); /* Police du titre */
+    
+}
+
+
+.sousTitreMentions {
+
+    color: var(--h3-color); /* Couleur du sous-titre */
+    font-family: var(--h3-police); /* Police du sous-titre */
+
+}
+
+.mentionsParagraphe {
+
+    font-family: var(--text-legal-police); /* Type de police du paragraphe */
+
+}
+
+
+/*! Styles Spécifiques à la version desktop */ 
+@media only screen and (min-width: 700px) {
+
+
+}

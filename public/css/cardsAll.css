@@ -1,0 +1,120 @@
+.card-container {
+
+    display: flex; /* Rend l'element flexible */
+    flex-direction: column; /* Met le contenue du container en colonne */
+    gap: 20px; /* Signifie qu'il y aura un espace de 20 pixels entre chaque élément enfant du conteneur */
+    padding: 20px; /* Met un espace entre le container de toutes les cards et celles ci */
+
+}
+
+
+.cardAll {
+
+    background-color: var(--background-cards-color); /* Couleur de fond pour la l'element */
+    border-color: var(--border-cards-color); /* Definis la couleur de la bordure */
+    border-radius: 10px; /* Bordures arrondies */
+    width: 300px; /* Definis la largeur de l'element */
+    padding: 20px; /* Met un espace entre la bordure et son contenue */
+    text-align: center; /* Aligne le text */
+    /* transition: transform 0.3s; */
+    border-width: 5px; /* Epaisseur de la bordure */ 
+    border-style: solid; /* Style de la bordure */
+
+}
+
+
+.truncateText {
+
+    display:-webkit-box; /* Box permetant d'appliquer les reglages suivants */
+    -webkit-line-clamp: 3; /* Limite a 3 lignes le texte */
+    -webkit-box-orient: vertical; /* Limite de maniere verticale le texte */
+    overflow: hidden; /* le surplus de text est cache */
+    text-overflow: ellipsis; /* Ajoute des points de suspensions a la fin du texte */
+
+}
+
+
+.invisible {
+
+    display: none; /* Cache les cards qui ne repondent pas au filtre */
+
+}
+
+
+.cardAll:hover { /* Hover specifie quie le css s'effectuera au survole de l'element par la souris */
+
+    transform: translateY(-10px); /* Au survole la card remonte pour un effet */
+
+}
+
+
+.cardAll h2 {
+
+    margin: 0; /* Retire la marge autour des titres */
+    color: var(--title-cards-color); /* Definis la couleur du texte */
+    font-family: var(--title-cards-police); /* Definis la police du texte */
+
+}
+
+
+.cardAll p {
+
+    color: var(--desc-cards-color); /* Definis la couleur du texte */
+    font-family: var(--desc-cards-police); /* Definis la police du texte */
+    line-height: 1.6; /* Definis la hauteur de la ligne */
+
+}
+
+
+.cardAll img {
+    
+    width: 100%; /* Definis la largeur de l'img */
+    border-radius: 10px; /* Bordures arrondies */
+    margin-bottom: 15px; /* Met un espace en bas entre chaque cards */
+    object-fit: contain; /* Est utilisée pour spécifier comment l'élément <img> ou <video> doit s'ajuster dans son conteneur */
+
+}
+
+
+.cardAll a {
+
+    color:var(--title-cards-color); /* Definis la couleur du texte */
+    text-decoration: none; /* Retire le soulignement des liens */
+    width: 50%; /* Prens la taille de son parent */
+
+}
+
+
+.cardAll a:hover { /* Hover specifie quie le css s'effectuera au survole de l'element par la souris */
+
+    text-decoration: underline; /* Est utilisée pour ajouter une ligne sous le texte */
+
+}
+
+
+.videoYt {
+
+    width: 100%; /* Definis la largeur de l'img */
+    border-radius: 10px; /* Bordures arrondies */
+
+}
+
+
+/*! Styles Spécifiques à la version desktop */ 
+@media only screen and (min-width: 700px) {  
+
+    .cardAll {
+
+        width: 20%; /* Definis la largeur de l'element par rapport a son parent */
+        height: auto; /* Adapte automatiquement la hauteur du parent a son contenue */
+
+    }
+
+    .card-container {
+        display: flex; /* Rend l'element flexible */
+        flex-direction: row; /* Met le contenue du container en ligne */
+        justify-content: space-evenly; /* Met de l'espace entre et autour des elements */
+        flex-wrap: wrap; /* Met en forme de lots de plusieurs card sur plusieurs lignes */
+        margin: auto; /* Adapte automatiquement les elements dans le conteneur parent */
+    }
+}

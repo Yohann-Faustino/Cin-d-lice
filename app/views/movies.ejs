@@ -1,0 +1,63 @@
+<%- include ('partials/header') %>
+
+
+    <%- include ('partials/title') -%>
+
+        <%- include ('partials/nav') %>
+
+
+
+            <div id="alphabet">
+
+                <% for(let i=65; i <=90; i++) {%>
+                    <button class="letter" onclick="filterCards('<%= String.fromCharCode(i)%>')"
+                        aria-label="Filtrer les films par lettre <%= String.fromCharCode(i) %>">
+                        <%= String.fromCharCode(i)%>
+                    </button>
+                    <% } %>
+                        <!-- Dans JavaScript, la fonction "String.fromCharCode()"" prend un code Unicode en argument et retourne le caractère correspondant à ce code Unicode. Le code Unicode pour les lettres majuscules de l'alphabet anglais va de 65 pour "A" à 90 pour "Z". Ainsi, dans la boucle "for", "i" commence à 65, qui est le code Unicode pour la lettre "A", et la boucle continue tant que "i" est inférieur ou égal à 90, qui est le code Unicode pour la lettre "Z". Cela permet de générer les boutons pour chaque lettre majuscule de l'alphabet anglais, de "A" à "Z". -->
+            </div>
+
+
+            <div class="card-container">
+                <% movies.forEach(function(movie) { %>
+                    <div class="cardAll" data-letter="<%= movie.titre.charAt(0).toUpperCase() %>">
+                        <!-- Stock dans une variable la premiere lettre(0) du titre du film (movie.titre) tout en le mettant en majuscule (.toUpperCase) pour eviter la casse afin de pouvoir afficher les films selon la premiere lettre de leur titre grace a la fonction filterCards. -->
+                        <h2>
+                            <a href="/films/<%= movie.id %>" aria-label="Lien vers le film">
+                                <%= movie.titre %>
+                            </a>
+
+                        </h2>
+                        <% if (movie.urlimg) { %>
+
+                            <% if (movie.urlimg.includes('youtube') ) { %>
+                                <iframe class="videoYt" width="560" height="315" src="<%= movie.urlimg %>" title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <% } else { %>
+
+                            <img src="<%= movie.urlimg%>" alt="Affiche de <%= movie.titre%>" />
+                            <% } } %>
+                                <p class="truncateText">
+                                    <%= movie.editorial %>
+                                </p>
+                                <% if (movie.recettes_id) {%>
+                                    <p> Recette associée : <a href="<%= movie.recettes_id %>"
+                                            aria-label="Lien vers la recette du film"></a></p>
+                                    <% } %>
+                                        <h3> Anecdote</h3>
+                                        <p class="truncateText">
+                                            <%= movie.anecdote %>
+                                        </p>
+
+                    </div>
+
+                    <% }); %>
+
+
+            </div>
+
+
+            <%- include ('partials/footer') %>

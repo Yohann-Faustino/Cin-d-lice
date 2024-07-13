@@ -1,0 +1,33 @@
+.planSiteLiens {
+
+    width: 80%; /* Definis la taille de l'element par rapport a son parent */
+    display: flex; /* Rend flexible l'element */
+    flex-direction: column; /* Met en colonne les elements */
+    align-items: center; /* Centre horizontalement les elements */ 
+    background-color: var(--planCard-background-color); /* Definis la couleur du background */
+    border-color:var(--planCard-border-color) ; /* Definis la couleur de la bordure */
+    border-width: 5px; /* Epaisseur de la bordure */
+    border-style: solid; /* Style de la bordure */
+    border-radius: 0.7rem; /* Arondie les angles de la bordure */
+    margin: auto; /* Met un espace autour de la card */
+    padding: 1rem; /* Met un espace dans la card entre la bordure et son contenue */
+
+}
+
+
+.planSiteLiens a {
+
+    color: var(--planCard-color); /* Definis la couleur du texte */
+    font-family: var(--planCard-police); /* Definis la police du texte */
+
+}
+
+
+.planSiteLiens a:hover { /* Ce css s'applique uniquement lorsque l'on passe la souris sur l'element */
+
+    color: var(--planCard-hover-color); /* Definis la couleur du texte */
+    background-color: var(--planCard-hover-background-color); /* Definis la couleur du background */
+    border-radius: 0.7rem; /* Arondie les angles de la bordure */
+    padding: 0.2rem; /* Met un espace dans la card entre la bordure et son contenue */
+
+}

@@ -1,0 +1,107 @@
+<%- include ('partials/header') %>
+
+
+
+    <%- include ('partials/title') -%>
+
+        <%- include ('partials/nav') %>
+
+            <section class="containerProfil">
+                <div class="blockGauche">
+
+                    <% if (typeof(message) != 'undefined' && message) { %>
+                        <p><%= message %></p>
+                    <% } %>
+
+                    <h2 class="profileTitre">Mon Profil</h2>
+
+                    <form action="/profile" method="post">
+                        <div class="divFormLabels">
+                            <label for="nom">Nom</label>
+                            <input type="text" id="nom" name="nom" value="<%= user.nom %>" aria-labelledby="nom">
+                        </div>
+
+                        <div class="divFormLabels">
+                            <label for="prenom">Prénom</label>
+                            <input type="text" id="prenom" name="prenom" value="<%= user.prenom %>" aria-labelledby="prenom">
+                        </div>                        
+
+                        <div class="divFormLabels">
+                            <label for="pseudo">Pseudo</label>
+                            <input type="text" id="pseudo" name="pseudo" value="<%= user.pseudo %>" aria-labelledby="pseudo">
+                        </div>
+        
+                        <div class="divFormLabels">
+                            <label for="date">Date de naissance</label>
+                            <input type="date" id="date" name="date" value="2024-09-09" min="1900-01-01" max="2900-12-31" aria-labelledby="date de naissance" />
+                        </div>
+        
+                        <div class="divFormLabels">
+                            <label for="adresse">Adresse</label>
+                            <input type="text" id="adresse" name="adresse" value="<%= user.adresse %>" aria-labelledby="adresse" />
+                        </div>
+
+                        <div class="divFormLabels">
+                            <label for="code_postal">Code Postal</label>
+                            <input type="text" id="code_postal" name="code_postal" value="<%= user.code_postal %>" aria-labelledby="code postal" />
+                        </div>
+        
+                        <div class="divFormLabels">
+                            <label for="ville">Ville</label>
+                            <input type="text" id="ville" name="ville" value="<%= user.ville %>" aria-labelledby="ville" />
+                        </div>
+        
+                        <div class="divFormLabels">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" value="<%= user.email %>" aria-labelledby="email" />
+                        </div>
+        
+                        <div class="divFormLabels">
+                            <label for="actual_password">Mot de passe actuel</label>
+                            <input type="password" id="actual_password" name="actual_password" aria-labelledby="mot de passe actuel">
+                        </div>
+        
+                        <div class="divFormLabels">
+                            <label for="new_password">Nouveau mot de passe</label>
+                            <input type="password" id="new_password" name="new_password" aria-labelledby="nouveau mot de passe" />
+                        </div>
+        
+                        <div class="divFormLabels">
+                            <label for="confirmed_new_password">Confirmer nouveau mot de passe</label>
+                            <input type="password" id="confirmed_new_password" name="confirmed_new_password" aria-labelledby="confirmation nouveau mot de passe" />
+                        </div>
+
+                        <div class="divFormLabels">
+                            <label for="avatar">Choisir un avatar</label>
+                            <select id="avatar" name="avatar" aria-labelledby="Choix de son avatar">
+                                <option value="/img/avatar1.webp" aria-labelle="avatar 1" >Avatar 1</option>
+                                <option value="/img/avatar2.webp" aria-labelle="avatar 2">Avatar 2</option>
+                                <option selected value="/img/avatar3.webp" aria-labelle="avatar 3">Avatar 3</option>
+                                <option value="/img/avatar4.webp" aria-labelle="avatar 4">Avatar 4</option>
+                                <option value="/img/avatar5.webp" aria-labelle="avatar 5">Avatar 5</option>
+                                <!-- Ajoutez les options pour les autres avatars -->
+                            </select>
+                        </div>
+                        <button class="boutonSavProfil" type="submit">Enregistrer les modifications</button>
+                    </form>
+
+                    <form action="/supprimer_profil" method="post" style="margin-top: 20px;">
+                        <button class="boutonSavProfil" type="submit" style="background-color: red;">Supprimer le profil</button>
+                    </form>
+                </div>
+
+                <div class="blockCentre">
+                </div>
+
+                <div class="blockDroit">
+                    <h2 class="profileLikees">Mes Recettes Likées</h2>
+
+                    <div class="imgTransparente">
+
+                        <!-- Insérer ici la liste des recettes likées -->
+                        <!-- Boucle à partir des données envoyées du serveur => voir liked_recipes -->
+                    </div>
+                </div>
+            </section>
+
+            <%- include('partials/footer') %>

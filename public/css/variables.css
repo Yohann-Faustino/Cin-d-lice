@@ -1,0 +1,246 @@
+:root {
+  /*   Header   */
+   --h1-color: #000000;
+   --background-header-color: #ffd700 ;
+   --h1-police: "Poetsen One", sans-serif;
+   
+   /*   Nav liste  header   */
+   --navListe-color: #db2b39;
+   --navListe-police: "Poetsen One", sans-serif;
+   
+/*_________________________________ACCUEIL_____________________________*/
+
+   /*   Paragraphe d'intro   */
+   --introParagraph-color: #000000 ;
+   --introParagraph-police: "Titillium Web", sans-serif;
+       
+   /*   Bouton voir plus  */
+   --background-button-more-color: #000000 ;
+   --button-more-color: #ffffff ;
+   --button-more-police: "Titillium Web", sans-serif;
+
+/*__________________________Footer_____________________________________*/
+
+   /*   Footer   */
+   --footer-color: #000000 ;
+   --background-footer-color: #ffd700 ;
+   --footer-police: "Titillium Web", sans-serif; 
+   
+   /*   Bouton contact  */
+   --button-contact-color: #ffffff ;
+   --background-button-contact-color: #297373 ;
+   --button-contact-police: "Titillium Web", sans-serif;
+
+   /*   Lien Mentions legales et Plan du site  */
+   --lien-footer-color: #000000 ;
+   --lien-footer-police: "Titillium Web", sans-serif;
+
+   /*   Lien Mentions legales et Plan du site  */
+   --lien-hover-footer-color: #ffffff ;
+   --lien-hover-footer-background: #297373 ;
+
+/*___________________________Profil______________________________________*/
+
+   /*  Titre profil   */
+   --profile-title-police: "Exo", sans-serif;
+   --profile-title-color: #db2b39 ;
+   --like-title-police: "Titillium Web", sans-serif;
+   --like-title-color: #db2b39 ;
+ 
+   /*  Label profil   */
+   --profile-input-color: #000000; /* label profil */
+ 
+   /*  Input profil   */
+   --buttonSavProfile-background-color: #297373 ;
+   --buttonSavProfile-police: "Titillium Web", sans-serif;
+   --buttonSavProfile-color: #ffffff ;
+
+   /*   Input suppr   */
+   --button-sup-color: #ffffff ;
+   --button-sup-background-color: #db2b39 ;
+   --sup-hover-background: #297373;
+   --sup-hover-color: #ffffff;
+   
+/*_______________________________Contact______________________________________*/
+
+   /*   Input contact   */
+   --input-form-contact-color: rgb(255, 255, 255) ;
+   --input-form-contact-police: "Titillium Web", sans-serif;
+ 
+   /*   soumission bouton   */
+   --button-contact-background-color: #297373 ;
+   --button-contact-color: #ffffff ;
+   --button-contact-police: "Titillium Web", sans-serif;
+
+   /*   Background   */
+   --clap-color: #000000;
+
+ /*___________________________Mentions legales________________________________*/
+
+   /*   Titres h2   */
+   --h2-color: #297373 ;
+   --h2-police: "Poetsen One", sans-serif;
+
+   /*   Titre h3   */
+   --h3-color: #297373 ;
+   --h3-police: "Bebas Neue", sans-serif;
+
+   /*   Mentions paragraphe   */
+   --text-legal-police: "Titillium Web", sans-serif;
+
+   /*___________________________Card recettes/film detail_______________________*/
+
+   /*   Card recettes/film detail et liste   */
+   --border-cards-color: #ffd700;
+   --background-cards-color: #ffffff;
+
+   /*   Titre card recettes/film detail et liste   */
+   --title-cards-color: #db2b39;
+   --title-cards-police: "Poetsen One", sans-serif;
+   --h3-cards-color: #297373;
+   --h3-cards-police: "Bebas Neue", sans-serif;
+
+   /*   Desc card recettes/film detail et liste   */
+   --desc-cards-color: #000000;
+   --desc-cards-police: "Titillium Web", sans-serif;
+
+   /*   Liens card recettes/film detail et liste   */
+   --link-cards-color: #db2b39;
+   --link-cards-police: "Titillium Web", sans-serif;
+
+   /*   Liens card hover recettes/film detail et liste   */
+   --link-hover-cards-color: #ffffff;
+   --link-hover-cards-background: #297373;
+
+   /*   Bouton LIKE   */
+   --like-background-color: #ffffff;
+   --like-shadow-color: #ffd700;
+   --like-border-color: #ffd700;
+   --like-color: #000000;
+   --like-police: "Bebas Neue", sans-serif;
+   --like-heart-color: #db2b39;
+   --like-hover-background-color: #8ea8c3;
+
+
+   /*____________________________Alphabet_____________________________________*/
+
+   /*   Alphabet  */
+   --background-color-block: #8ea8c3;
+   --background-border-color: #000000;
+
+
+   /*   Alphabet touche,   */
+   --border-color-letter: #ffd700;
+   --background-color-letter: #ffffff;
+   --color-letter: #db2b39;
+   --letter-selected-background-color: #ffffff;
+   --letter-selected-police-color: #000000;
+
+   /*   Alphabet hover touche   */
+   --hover-border-color-letter: #db2b39;
+   --hover-background-color: #000000;
+   --hover-color-letter: #ffffff;
+
+   /*___________________________Connexion/Inscription______________________*/
+   
+   /*   Slide arriere form   */
+   --background-connect-form-color: #ffffff;
+
+   /*   Input form   */
+   --input-form-color: #000000;
+   --input-form-police: "Titillium Web", sans-serif;
+   --input-linear-left: #8ea8c3;
+   --input-linear-right: #ffd700;
+
+   /*   Bouton form   */
+   --background-button-form-color: #000000;
+   --form-button-color: #ffd700;
+   --form-button-police: "Poetsen One", sans-serif;
+
+   /*   Bouton hover form   */
+   --background-hover-button-form-color: #ffffff;
+   --police-hover-button-form-color: #000000;
+
+   /*   Social form   */
+   --background-social-color: #000000;
+   --police-social-color: #ffd700;
+
+   /*   Social hover form   */
+   --background-hover-social-color: #ffffff;
+   --police-hover-social-color: #000000;
+   --border-hover-social-color: #ffd700;
+
+   /*   Slider form   */
+   --slider-linear-left: #ffd700;
+   --slider-linear-right: #8ea8c3;
+
+   /*   Titre form   */
+   --title-color: #000000;
+   --title-police: "Poetsen One", sans-serif;
+
+   /*   Autres textes form   */
+   --p-color: #000000;
+   --p-police: "Poetsen One", sans-serif;
+
+   /*   Lien password oublier   */
+   --link-forget-color:  #db2b39;
+   --link-forget-border-color:  #ffffff; /* Attention cette couleur definis le bouton que l'on souhaite garder transparent pour eviter un decallage lors de son hover */
+   --link-forget-police: "Poetsen One", sans-serif;
+
+   /*   Lien hover password oublier   */
+   --link-hover-forget-background-color: #000000;
+   --link-hover-forget-color: #ffd700;
+   --link-hover-forget-border-color: #000000;
+
+   /* Message du validator */
+   --message-validator-color:  #db2b39;
+   --message-validator-police: "Exo", sans-serif;
+
+   /*___________________________Forget password_________________________________*/
+   
+   /*   Titre h2   */
+   --title-forgetPassword-color: #db2b39;
+   --title-forgetPassword-police: "Poetsen One", sans-serif;
+
+   /*   Background form   */
+   --form-forget-background-color: #ffffff;
+
+   /*___________________________Plan du site_________________________________*/
+
+   /*   Liens du plan   */
+   --planCard-background-color: #ffffff;
+   --planCard-color: #db2b39;
+   --planCard-police: "Titillium Web", sans-serif;
+   --planCard-border-color: #ffd700;
+   --planCard-hover-color: #ffffff;
+   --planCard-hover-background-color: #297373;
+
+   /*___________________________404__________________________________________*/
+
+   /*   Liens retour accueil   */
+   --error-hover-background: #297373;
+   --error-hover-color: #ffffff;
+   --error-police: "Poetsen One", sans-serif;
+   --error-color: #db2b39;
+   
+}
+   
+
+ /*   Police ecriture:   
+
+   h1 + titre recette 
+ font-family: "Poetsen One", sans-serif; 
+
+    titre film   
+ font-family: "Bebas Neue", sans-serif;
+
+    description recette, titre mon profil 
+ font-family: "Exo", sans-serif;
+
+    description films, p intro, footer, boutons,
+    titre recettes likees, formulaires 
+ font-family: "Titillium Web", sans-serif;
+
+ */
+
+

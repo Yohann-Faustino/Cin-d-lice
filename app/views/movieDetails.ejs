@@ -1,0 +1,34 @@
+<%- include ('partials/header') %>
+
+    <%- include ('partials/title') -%>
+
+        <%- include ('partials/nav') %>
+
+            <div class="cardDetailsContainer">
+                <h2 class="titleCardsDetails">
+                    <%= film.titre %>
+                </h2>
+                <div class=".cardDetailsImg">
+                    <img src="<%= film.urlimg %>" class="imgRecetteFilms" alt="Affiche du film <%= film.titre %>" />
+                </div>
+                <div class="cardDetailsContenue">
+                    <p class="cardDetailsParagraphes">
+                        <%= film.editorial %>
+                    </p>
+
+                    <h3>Anecdote</h3>
+
+                    <p class="cardDetailsParagraphes">
+                        <%= film.anecdote %>
+                    </p>
+
+                    <h3>Les recettes associées</h3>
+
+                    <% film.recettes.forEach(function(recette) { %>
+                        <a class="lienRecettesFilms" href="/recettes/<%= recette.id %>" aria-label="Lien vers les recettes du film">
+                            <%= recette.nom %>
+                        </a>
+                        <% }) %>
+                </div>
+            </div>
+            <%- include ('partials/footer') %>

@@ -1,0 +1,166 @@
+.cardDetailsContainer {
+
+  display: flex; /* Rend l'element flexible */
+  flex-direction: column; /* Met le contenue du container en colonne */
+  text-align: center; /* Aligne le text */
+  margin: auto; /* Adapte automatiquement les elements dans le conteneur parent */
+  background-color: var(--background-cards-color); /* Couleur de fond pour l'element */
+  border-color: var(--border-cards-color); /* Choisis la couleur de la bordure */
+  border-width: 5px; /* Specifie l'epaisseur du triat de la bordure */
+  border-radius: 20px; /* Bordures arrondies */
+  border-style: solid; /* Style de la bordur est un trait continue */
+  padding: 1rem; /* Met un espace entre le bord de la cards et son contenue */
+
+}
+
+
+.cardDetailsImg {
+
+  display: flex; /* Rend l'element flexible */
+  justify-content: center; /* Aligne horizontalement les elements */
+
+}
+
+
+.imgRecetteDetails{
+
+  height: 200px; /* Definis la heuteur de l'element */
+
+}
+
+
+.imgRecetteFilms{
+
+  height: 200px; /* Definis la largeur de l'element */
+
+}
+
+
+.ingredientDetailsItem {
+
+  display: flex; /* Rend l'element flexible */
+  flex-direction: row; /* Met le contenue du container en ligne */
+  justify-content: space-between; /* Met de l'espace entre les elements */
+  width: 80%; /* Definis la largeur de l'element */
+  margin: auto; /* Adapte automatiquement les elements dans le conteneur parent */
+
+}
+
+
+.titleCardsDetails {
+
+  color: var(--title-cards-color); /* Definis la couleur du texte */
+  font-family:var(--title-cards-police) ; /* Definis la police du texte */
+
+}
+
+
+.cardDetailsParagraphes {
+
+  color: var(--desc-cards-color); /* Definis la couleur du texte */
+  font-family: var(--desc-cards-police); /* Definis la police du texte */
+
+}
+
+
+.cardDetailsContenue h3 {
+
+  color: var(--h3-cards-color); /* Definis la couleur du texte */
+  font-family: var(--h3-cards-police); /* Definis la police du texte */
+
+}
+
+
+.lienRecettesFilms {
+
+  /* text-decoration: none; */
+  color: var(--link-cards-color); /* Definis la couleur du texte */
+  font-family: var(--link-cards-police); /* Definis la police du texte */
+  
+}
+
+
+.lienRecettesFilms:hover{ /* Ce CSS s'applique lors du passage de la souris sur l'element */
+
+  color: var(--link-hover-cards-color); /* Definis la couleur du texte */
+  background-color: var(--link-hover-cards-background); /* Couleur de fond pour l'element */
+  border-radius: 10px; /* Bordures arrondies */
+  padding: 0.5rem; /* Met un espace entre le lien et son parent */
+
+}
+
+
+.likeButton {
+
+  display: flex; /* Rend l'element flexible */
+  justify-content: center; /* Centre horizontalement l'element */
+  align-items: center; /* Centre horizontalement l'element */
+  box-shadow: var(--like-shadow-color) 0px -2px 6px 0px inset; /* Ombre vers l'interieur de l'element */
+  background-color: var(--like-background-color); /* Definis la couleur du background */
+  border-color: var(--like-border-color); /* Definis la couleur de la bordure */
+  border-style: solid; /* Definis le style de la bordure */
+  border-width: 3px; /* Definis l'epaisseur de la bordure */
+  border-radius: 35px; /* Arrondie la bordure */
+  font-size: 25px; /* Definis la hauteur du texte */
+  color: var(--like-color); /* Definis la couleur du texte */
+  font-family: var(--like-police); /* Definis la police du texte */
+  transition: transform 400ms cubic-bezier(0.68, -0.55, 0.27, 2.5), /* Cree une oscillation dans l'effet d'agrandissement de l'element */
+  border-color 400ms ease-in-out, /* Effet qui commence lentement, accélère au milieu, puis ralentit à nouveau vers la fin de la transition sur une durée de 400ms */
+  background-color 400ms ease-in-out; /* Effet qui commence lentement, accélère au milieu, puis ralentit à nouveau vers la fin de la transition sur une durée de 400ms */
+  width: 30%; /* Definis la largeur de l'element */
+  position: relative; /* Sert de référence de positionnement pour les enfants ayant position: absolute */
+
+}
+
+
+.likeButton:hover { /* Ce css ne s'applique que au passage de la souris sur l'element */
+
+  background-color: var(--like-hover-background-color); /* Definis la couleur du background */
+  transform: scale(105%); /* Effet qui augmente la taille de l'element, va de paire avec les 3 lignes dont les commentaires commencent par "effet" */
+
+}
+
+
+.likeButton svg {
+
+  fill: var(--like-heart-color); /* Couleur du trait de l'img svg */
+
+}
+
+
+.empty {
+
+  position: relative; /* Sert de référence de positionnement pour les enfants ayant position: absolute */
+
+}
+
+
+.filled {
+
+  position: absolute; /* L'element est positionné par rapport à son parent avec position: relative */  opacity: 0; /* Rens invisible l'element */
+  top: 50%; /* Accroche l'img constament a cette endroit en hauteur pour rester centrer */
+  left: 50%; /* Accroche l'img constament a cette endroit en largeur pour rester centrer */
+  transform: translate(-105%, -50%); /* Une fois la position de base definie precedement on lui donne la position finale qu'on l'on souhaite garder */
+
+}
+
+
+.likeButton:hover .filled { /* Ce css ne s'applique que au passage de la souris sur l'element */
+
+  opacity: 1; /* Rens visible l'element cacher precedement */
+
+}
+
+
+/*! Styles Spécifiques à la version desktop */ 
+@media only screen and (min-width: 700px) {
+
+
+  .cardDetailsContainer {
+
+    width: 60%; /* Definis la largeur de l'element */
+    padding: 2rem; /* Met un espace entre le bord de la cards et son contenue */
+  
+  }
+
+}

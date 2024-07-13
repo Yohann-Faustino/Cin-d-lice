@@ -1,0 +1,17 @@
+<main>
+
+<nav class="navBlock" aria-label="Menu principal">
+    <ul class="navUl">
+        <li><a href="/" class="navListe">Accueil</a></li>
+
+
+        <li><a href="/recettes" class="navListe" title="Liens vers la liste de recettes">Recettes</a></li>
+        <li><a href="/films" class="navListe" title="Liens vers la liste de films">Films</a></li>
+        <% if (isLogged) { %>
+        <li><a href="/profile" class="navListe" title="Liens vers votre profil">Profil</a></li>
+        <li><a href="/logout" class="navListe" title="deconnexion">Deconnexion</a></li>
+        <% }  else { %>
+        <li><a href="/login" class="navListe" title="Liens vers l'inscription ou la connexion'">Inscription/Connexion</a></li>
+        <% } %>
+    </ul>
+</nav>

@@ -1,0 +1,106 @@
+footer{
+
+    background-color:var(--background-footer-color) ; /* Couleur du background du footer */
+    font-family: var(--footer-police); /* Police du footer */
+    color: var(--footer-color);/* Couleur du footer */
+    display: flex;  /* Rend le footer flexible */
+    flex-direction: row; /* Aligne le texte du footer et le bouton contact */
+    justify-content: space-around;  /* Met de l'espace autour des elements du footer*/
+    align-items: center; /* Centre verticalement les elements du footer */
+    height: 100px; /* Hauteur du footer */
+    margin-top: 1rem; /* Cree un espace au-dessus du footer */ 
+
+}
+  
+
+.contact {
+
+   background-color: var(--background-button-contact-color); /* Couleur du background du bouton contact */
+   color: var(--button-contact-color); /* Couleur du bouton contact */
+   font-family: var(--button-contact-police); /* Police du bouton contact */
+   text-decoration: none; /* Retire le soulignement du lien du bouton */
+   padding-left: 0.5rem; /* Met de l'espace entre le texte a l'interieur du bouton et le bord gauche du boutton */
+   padding-right: 0.5rem; /* Met de l'espace entre le texte a l'interieur du bouton et le bord droit du boutton */
+   font-size: 1rem; /* Taille du texte du bouton */
+   border-radius: 0.7rem; /* Arrondie les angles du bouton */
+   font-weight: 500; /* Epaisseur de la police du texte du bouton contact */
+   height: 1.5rem; /* Taille du bouton */
+  
+}
+
+
+.mentionsLien {
+
+    color: var(--lien-footer-color); /* Couleur du lien mentions legales */
+    font-family: var(--lien-footer-police); /* Police du lien mentions legales */
+    text-decoration: none; /* Retire le soulignement du lien */
+
+}
+
+
+.mentionsLien:hover { /* Ce css s'applique seulement quand on passe la souris sur l'element */
+
+    color: var(--lien-hover-footer-color); /* Couleur du lien mentions legales */
+    background-color: var(--lien-hover-footer-background); /* Couleur du background du lien */
+    border-radius: 0.7rem; /* Arrondie les angles du bouton */
+
+}
+
+
+.plan {
+
+    color: var(--lien-footer-color); /* Couleur du lien mentions legales */
+    font-family: var(--lien-footer-police); /* Police du lien mentions legales */
+    text-decoration: none; /* Retire le soulignement du lien */
+
+}
+
+
+.plan:hover { /* Ce css s'applique seulement quand on passe la souris sur l'element */
+
+    color: var(--lien-hover-footer-color); /* Couleur du lien mentions legales */
+    background-color: var(--lien-hover-footer-background); /* Couleur du background du lien */
+    border-radius: 0.7rem; /* Arrondie les angles du bouton */
+
+}
+    
+  
+/*! Styles Spécifiques à la version desktop */ 
+@media only screen and (min-width: 700px) {
+
+
+    .footer {
+
+        display: flex; /* Rend le conteneur titreBlock flexible */
+        justify-content: space-evenly;  /* Met de l'espace entre chaque element du footer*/
+        margin-top: 1rem; /* Cree un espace au-dessus du footer */ 
+
+    }
+
+    .footerParagraphe {
+
+        font-size: xx-large; /* Taille de la police du footerParagraphe */
+
+    }
+
+    .contact {
+
+        align-content:center;  /* Centre verticalement le texte du bouton */
+        font-size: x-large; /* Augmente la taille du texte */
+        padding-bottom: 1rem; /* Met de l'espace entre le bord bas du bouton et son contenue */
+    
+    }
+
+    .mentionsLien {
+
+        font-size: 2rem; /* On choisis la taille de la police du lien mentions legales */
+    
+    }
+
+    .plan {
+
+        font-size: 2rem; /* On choisis la taille de la police du lien mentions legales */
+    
+    }
+
+}

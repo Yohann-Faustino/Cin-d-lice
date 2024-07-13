@@ -1,0 +1,97 @@
+<%- include ('partials/header') %>
+
+
+	<%- include ('partials/title') -%>
+
+
+		<%- include ('partials/nav') %>
+
+			<section class="body">
+
+				<!-- si erreur dans le formulaire, alors afficher le message d'erreur -->
+				<% if(typeof message !="undefined" && message) { %>
+					<div class="message-error">
+						<p>
+							<%= message %>
+						</p>
+					</div>
+					<% } %>
+						<!--  -->
+
+						<div class="container" id="container">
+							<div class="form-container sign-up-container">
+
+								<form action="/signup" class="formConnexion" method="POST">
+
+									<h2 class="h2">Creer un compte</h2>
+
+									<div class="social-container">
+										<a class="a" aria-label="Lien vers Facebook"
+											href="https://fr-fr.facebook.com/login.php/" target="_blank"><i
+												class="fab fa-facebook-f"></i></a>
+										<a class="a" aria-label="Lien vers compte Gmail"
+											href="https://accounts.google.com/b/0/AddMailService" target="_blank"><i
+												class="fab fa-google-plus-g"></i></a>
+										<a class="a" aria-label="Lien vers Linkedin"
+											href="https://www.linkedin.com/uas/login?session_redirect=https://www.linkedin.com/feed/%253Ftrk=404_page"
+											target="_blank"><i class="fab fa-linkedin-in"></i></a>
+									</div>
+
+									<span>Je n'ai pas de compte</span>
+
+									<input type="text" name="lastname" placeholder="Nom" class="inputConnexion" aria-labelledby="nom">
+									<input type="text" name="firstname" placeholder="Prenom" class="inputConnexion" aria-labelledby="prenom">
+									<input type="text" name="pseudo" placeholder="Pseudo" class="inputConnexion" aria-labelledby="pseudo">
+									<input type="email" name="email" placeholder="Email" class="inputConnexion" aria-labelledby="email">
+									<input type="password" name="password" placeholder="Mot de passe" aria-labelledby="mot de passe"
+										class="inputConnexion">
+									<input type="password" name="confirmed-password" placeholder="Confirmation du mot de passe" aria-labelledby="confirmation du mot de passe"
+										class="inputConnexion">
+									<button type="submit" class="btn">Creer le compte</button>
+								</form>
+							</div>
+							<div class="form-container login-container">
+								<form action="/login" class="formConnexion" method="POST">
+									<h2 class="h2">Se connecter</h2>
+
+									<div class="social-container">
+										<a class="a" aria-label="Lien vers Facebook" href="https://fr-fr.facebook.com/login.php/" target="_blank"><i
+												class="fab fa-facebook-f"></i></a>
+										<a class="a"aria-label="Lien vers compte Gmail" href="https://accounts.google.com/b/0/AddMailService"
+											target="_blank"><i class="fab fa-google-plus-g"></i></a>
+										<a class="a" aria-label="Lien vers Linkedin"
+											href="https://www.linkedin.com/uas/login?session_redirect=https://www.linkedin.com/feed/%253Ftrk=404_page"
+											target="_blank"><i class="fab fa-linkedin-in"></i></a>
+									</div>
+
+									<span>Utiliser compte gmail</span>
+									<input type="email" name="email" placeholder="Email" value="slowzaf@gmail.com" aria-labelledby="email"
+										class="inputConnexion">
+									<input type="password" name="password" placeholder="Mot de passe" aria-labelledby="mot de passe"
+										value="007.Bateau007" class="inputConnexion">
+										<a href="/forgotPassword" class="forgotPassword">Mot de passe oublié?</a>
+
+									<button class="btn">Se connecter</button>
+								</form>
+							</div>
+
+							<div class="overlay-container">
+								<div class="overlay">
+									<div class="overlay-panel overlay-left">
+										<h2 class="h2">Heureux de vous revoir !</h2>
+										<p class="p">Si vous disposez déjà d'un compte, connectez-vous ici.</p>
+										<button class="ghost  btn" id="login">Se connecter</button>
+									</div>
+									<div class="overlay-panel overlay-right">
+										<h2 class="h2">Bienvenue !</h2>
+										<p class="p">Créer un compte et rejoindre notre communauté.</p>
+										<button class="ghost btn" id="signUp">Creer un compte</button>
+									</div>
+								</div>
+							</div>
+						</div>
+			</section>
+
+			<script src="/js/script.js" charset="utf-8"></script>
+			<%- include('partials/footer') -%>
+

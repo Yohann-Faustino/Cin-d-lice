@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+.body {
+
+	display: flex; /* Rend l'element flexible */
+	justify-content: center; /* Aligne horizontalement les elements */
+	align-items: center; /* Centre verticalement les elements */
+	flex-direction: column; /* Met le contenue du container en colonne */
+
+}
+
+
+.container{
+
+
+	position: relative; /* Sert de référence de positionnement pour les enfants ayant position: absolute */
+	overflow: hidden; /* Rend invisible l'element */
+	min-height: 480px; /* Definis la hauteur minimum de l'element */
+	width: 768px; /* Definis la largeur de l'element */
+	max-width: 100%; /* Definis la hauteur max de l'element */
+	border-radius: 10px; /* Bordures arrondies */
+	box-shadow: 0 8px 24px  rgba(0, 0, 0, 0.45), /* Ombre autour du form */
+		  0 8px 8px rgba(0, 0, 0, 0.45); /* Ombre autour du form */
+
+}
+
+
+.form-container {
+
+    position: absolute; /* L'element est positionné par rapport à son parent avec position: relative */	top: 0; /* Notre element etant en position deplacable on lui donne un point de depart */
+	height: 100%; /* Definis la hauteur de l'element */
+	transition: .6s ease-in-out; /* Effet transition rapide au début, puis lente qui dure 6 segondes */
+
+}
+
+
+.sign-up-container {
+
+	left: 0; /* Notre element etant en position deplacable on lui donne un point de depart */
+	width: 50%; /* Definis la largeur de l'element */
+	opacity: 0; /* Gere l'opacite de l'element */
+	z-index: 1; /* Fait passer l'element devant un autre selon chiffre */
+
+}
+
+
+.container.panel-active .sign-up-container {
+
+	transform: translateX(100%); /* Déplacer un élément de 100% horizontalement par rapport à sa position d'origine */
+	opacity: 1; /* Gere l'opacite de l'element */
+	z-index: 5; /* Fait passer l'element devant un autre selon chiffre */
+	animation: show .6s /* Definis la duree de l'animation qu'on a apeler show */
+
+}
+
+
+.forgotPassword {
+
+	color: var(--link-forget-color); /* Definis la couleur du texte */
+	font-family: var(--link-forget-police); /* Definis la police du texte */
+	/* Ici je cree un bouton autour du lien en transparent car je veu pas le voir mais au hover je lui applique une couleur car la je voudrais le voir. Si j'applique pas de bouton transparent il s'effectuera un decalage entre les element pour que le bouton du hover apparaisse */
+	border-width: 1px; /* Definis l'epaisseur de la bordure' */
+	border-style: solid; /* Definis le style de la bordure' */
+	border-color: var(--link-forget-border-color); /* Definis la couleur de la bordure' */
+	border-radius: 50px; /* Definis l'arrondie de la bordure' */
+	padding: 0.3rem; /* Met un espace entre le text et son parent */
+
+}
+
+
+.forgotPassword:hover { /* Le css suivant s'applique au passage de la souris sur l'element */
+
+	background-color: var(--link-hover-forget-background-color); /* Definis la couleur du background */
+	color: var(--link-hover-forget-color); /* Definis la couleur du texte */
+	border-width: 1px; /* Definis l'epaisseur de la bordure */
+	border-style: solid; /* Definis le style de la bordure */
+	border-color: var(--link-hover-forget-border-color); /* Definis la couleur de la bordure */
+	border-radius: 50px; /* Definis l'arondie de la bordure */
+	padding: 0.3rem; /* Met un espace entre le text et son parent */
+
+}
+
+
+@keyframes show {
+	0%, 49.99% { /*  À 0% et jusqu'à 49.99% du temps d'animation, */
+		opacity: 0; /* Definis l'opacité */
+		z-index: 1; /* Definis le niveau de l'element par rapport a un autre */
+	}
+
+	50%, 100% { /*  À 50% et jusqu'à 100% du temps d'animation, */
+		opacity: 1; /* Definis l'opacité */
+		z-index: 5; /* Definis le niveau de l'element par rapport a un autre */
+	}
+}
+
+
+.container.panel-active .login-container {
+
+	transform: translateX(100%); /* Déplacer un élément de 100% horizontalement par rapport à sa position d'origine */
+
+}
+
+
+.login-container {
+
+	left: 0; /* Notre element etant en position deplacable on lui donne un point de depart */
+	width: 50%; /* Definis la largeur de l'element */
+	z-index: 2; /* Fait passer l'element devant un autre selon chiffre */
+
+}
+
+
+.formConnexion {
+
+	background-color: var(--background-connect-form-color); /* Couleur de fond pour la l'element */
+	display: flex; /* Rend l'element flexible */
+	align-items: center; /* Centre verticalement les elements */
+	justify-content: center; /* Aligne horizontalement les elements */
+	flex-direction: column; /* Met le contenue du container en colonne */
+	height: 100%; /* Definis la hauteur de l'element */
+	text-align: center; /* Aligne le text */
+
+}
+
+
+.inputConnexion {
+
+	background: linear-gradient(to right, var(--input-linear-left), var(--input-linear-right)); /* Effet degrader de couleur */
+	border: none; /* Retire la bordure native de l'input */
+	padding: 12px 15px; /* Met un espace entre la bordure et son contenue */
+	margin: 8px 0; /* Met un espace autour de l'element */
+	width: 60%; /* Definis la largeur de l'element */
+	height: 0.1%; /* Definis la hauteur de l'element */
+
+}
+
+
+::placeholder { /* Definis un css sur les placeholders */
+
+	color: var(--input-form-color); /* Definis la couleur de la lettre */
+	font-family: var(--input-form-police); /* Definis la police du texte */
+	text-align: center; /* Aligne le text */
+
+}
+
+
+button.ghost {
+
+	background-color: var(--background-button-form-color); /* Couleur de fond pour la l'element */
+
+}
+
+
+.btn {
+
+	background-color: var(--background-button-form-color); /* Couleur de fond pour la l'element */
+	color: var(--form-button-color); /* Definis la couleur du texte */
+	font-family: var(--form-button-police); /* Definis la police du texte */
+	font-size: 16px; /* Definis la taille de la police */
+	font-weight: bold; /* Met en gras */
+	padding: 16px 32px; /* Met de l'espace entre le contenue et son parent */
+	margin-top: 24px; /* Met un espace au dessus de l'element */
+	letter-spacing: 1px; /* Met un espace entre les lettres */
+	border-radius: 50px; /* Bordures arrondies */
+	transition: .10s ease-in; /* Effet transition lente au début, puis rapide */
+	border-width: 2px; /* Specifie l'epaisseur du triat de la bordure */
+	border-style: solid; /* Style de la bordur est un trait continue */
+
+}
+
+
+button:hover { /* Hover specifie quie le css s'effectuera au survole de l'element par la souris */
+	
+	cursor: pointer; /* Ajoute un pointeur au curseur pourmontrer que l'element est cliquable */
+	background-color: var(--background-hover-button-form-color); /* Couleur de fond pour la l'element */
+	color: var(--police-hover-button-form-color); /* Definis la couleur du texte */
+
+}
+
+
+button:active { /* Sélecteur pseudo-classe qui cible le bouton lorsqu'il est en état actif (lorsqu'il est cliqué ou pressé) */
+	
+	transform: scale(.95); /* Transformation qui réduit la taille du bouton à 95% de sa taille d'origine */
+
+}
+
+
+.social-container {
+
+	margin: 24px 0; /* Met un espace autour de l'element */
+
+}
+
+
+.social-container a {
+
+	display: inline-flex; /* Rend flexible l'element et aligne */
+	justify-content: center; /* Aligne horizontalement les elements */
+	align-items: center; /* Aligne verticalement les elements */
+	margin: 0 4px; /* Definis l'espace a gauche et a droite de l'element en n'en mettant pas en haut et en bas */
+	height: 40px; /* Definis la hauteur de l'element */
+	width: 40px; /* Definis la largeur de l'element */
+	border-radius: 50%; /* Bordures arrondies */
+	background-color: var(--background-social-color); /* Couleur de fond pour la l'element */
+	border: 2px solid; /* Definis l'epaisseur et le style de la bordure */
+
+}
+
+
+.h2 {
+
+	margin: 0; /* Retire l'espace autour de l'element */
+	font-size: 24px; /* Taille de la police */
+	color: var(--title-color); /* Definis la couleur du texte */
+	font-family: var(--title-police); /* Definis la police du texte */
+	width: 85%; /* Definis la largeur de l'element */
+
+}
+
+
+span {
+
+	font-size: 14px; /* Taille de la police */
+	color: var(--title-color); /* Definis la couleur du texte */
+	font-family: var(--p-police); /* Definis la police du texte */
+
+}
+
+
+.a {
+
+	text-decoration: none; /* Retire le soulignement des liens */
+	font-size: 14px; /* Taille de la police */
+	margin: 8px 0 16px; /* Met un espace autour de l'element */
+	color: var(--police-social-color); /* Definis la couleur du texte */
+	background-color: var(--background-social-color); /* Couleur de fond pour la l'element */
+	border-style: solid; /* Definis le style de la bordure */
+	border-width: 20px; /* Definins l'epaisseur de la bordure */
+	transition: .10s ease-in; /* Effet transition lente au début, puis rapide en 10 secondes */
+
+}
+
+
+.a:hover { /* Hover specifie quie le css s'effectuera au survole de l'element par la souris */
+	
+	cursor: pointer; /* Ajoute un pointeur au curseur pourmontrer que l'element est cliquable */
+	background-color: var(--background-hover-social-color); /* Couleur de fond pour la l'element */
+	color: var(--police-hover-social-color); /* Definis la couleur du texte */
+	border-color: var(--border-hover-social-color); /* Definis la couleur de la bordure */
+
+}
+
+
+.a:active { /* Sélecteur pseudo-classe qui cible le bouton lorsqu'il est en état actif (lorsqu'il est cliqué ou pressé) */
+
+	transform: scale(.95); /* Transformation qui réduit la taille du bouton à 95% de sa taille d'origine */
+
+}
+
+
+.overlay-container {
+
+    position: absolute; /* L'element est positionné par rapport à son parent avec position: relative */	top: 0; /* Notre element etant en position deplacable on lui donne un point de depart */
+	left: 50%; /* On lui donne un secong point de depart pour qu'il reste toujours au meme endroit meme si la taille de la page est differente */
+	width: 50%; /* Definis la largeur de l'element */
+	height: 100%; /* Definis la hauteur de l'element */
+	overflow: hidden; /* Cache l'element pour l'effet */
+	z-index: 100; /* Passe au premier niveau un element par rapport aux autres */
+	transition: transform .6s ease-in-out; /* Effet transition lente au début et à la fin, rapide au milieu en 6 secondes */
+
+}
+
+
+.container.panel-active .overlay-container {
+
+	transform: translateX(-100%); /* Déplacer un élément de 100% horizontalement par rapport à sa position d'origine */
+
+}
+
+
+.overlay {
+
+	background: linear-gradient(to right, var(--slider-linear-left), var(--slider-linear-right)); /* Effet degrader de couleur */
+	position: relative; /* Sert de référence de positionnement pour les enfants ayant position: absolute */
+	left: -100%; /* Deplace l'element */
+	height: 100%; /* Definis la hauteur de l'element */
+	width: 200%; /* Definis la largeur de l'element */
+	transform: translateX(0); /* Signifie qu'il n'y a aucun déplacement par rapport à sa position de départ */
+	transition: transform .6s ease-in-out; /* Effet transition lente au début et à la fin, rapide au milieu en 6 secondes */
+
+}
+
+
+.container.panel-active .overlay {
+
+	transform: translateX(50%); /* Signifie que l'élément sera déplacé de 50% de sa propre largeur vers la droite */
+
+}
+
+
+.overlay-panel {
+
+    position: absolute; /* L'element est positionné par rapport à son parent avec position: relative */	display: flex; /* Rend l'element flexible */
+	align-items: center; /* Aligne horizontalement les elements */
+	justify-content: center; /* Aligne verticalement les elements */
+	flex-direction: column; /* Met le contenue du container en colonne */
+	text-align: center; /* Aligne le text */
+	top: 0; /* Notre element etant en position deplacable on lui donne un point de depart */
+	height: 100%; /* Definis la hauteur de l'element */
+	width: 50%; /* Definis la largeur de l'element */
+	transform: translateX(0); /* Signifie qu'il n'y a aucun déplacement par rapport à sa position de départ */
+	transition: transform .6s ease-in-out; /* Effet transition lente au début et à la fin, rapide au milieu en 6 secondes */
+
+}
+
+
+.overlay-left {
+
+	transform: translateX(-20%); /* Signifie que l'élément sera déplacé de 20% de sa propre largeur vers la gauche */
+
+}
+
+
+.container.panel-active .overlay-left {
+
+	transform: translateX(0); /* Signifie qu'il n'y a aucun déplacement par rapport à sa position de départ */
+
+}
+
+
+.overlay-right {
+
+	right: 0; /* Notre element etant en position deplacable on lui donne un point de depart */
+	transform: translateX(0); /* Signifie qu'il n'y a aucun déplacement par rapport à sa position de départ */
+
+}
+
+
+.container.panel-active .overlay-right {
+
+	transform: translateX(20%); /* Signifie que l'élément sera déplacé de 20% de sa propre largeur vers la droite */
+
+}
+
+
+.p {
+
+	font-size: 14px; /* Definis la taille du texte */
+	font-weight: 100; /* Spécifier une épaisseur de police très fine */
+	line-height: 20px; /* Définis la hauteur de ligne d'un élément en pixels */
+	letter-spacing: .5px; /* Espace entre les lettres */
+	margin: 20px 0 30px; /* Definis un espace en haut, rien a gauche et a droite, et en definis une en bas */
+	color: var(--p-color); /* Definis la couleur du texte */
+	font-family: var(--p-police); /* Definis la police du texte */
+	width: 80%; /* Definis la largeur de l'element */
+
+}
+
+
+.message-error{
+
+	color: var(--message-validator-color); /* Definis la couleur du texte */
+	font-family: var(--message-validator-police); /* Definis la police du texte */
+	font-size: xx-large;
+}
+
+
+/*! Styles Spécifiques à la version desktop */ 
+@media only screen and (min-width: 700px) {  
+
+
+	.btn {
+
+		width: 60%; /* Definis la largeur de l'element */
+
+	}
+}
